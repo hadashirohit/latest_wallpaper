@@ -469,6 +469,77 @@
         }
 
 
+        /* wallpaper card */
+        
+.section__container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+  }
+  
+  
+  
+  img {
+    width: 100%;
+    display: block;
+  }
+  
+  
+  .destination__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  .destination__card {
+    overflow: hidden;
+    position: relative;
+    isolation: isolate;
+    cursor: pointer;
+  }
+  
+  .destination__card img {
+    border-radius: 1rem;
+  }
+  
+  .destination__details {
+    position: absolute;
+    width: calc(100% - 2rem);
+    padding: 1rem;
+    bottom: -6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+  
+  
+  }
+  
+  .destination__card:hover .destination__details {
+    bottom: 1rem;
+  }
+  
+  .destination__title {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .destination__subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .h1title{
+    font-family: "Poppins",sans-serif;
+   text-align: center;
+    background-image: linear-gradient(43deg,#4158d0 0%, #c850c0 46%, #ffcc70 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
         /*=============== BREAKPOINTS ===============*/
         /* For small devices */
         @media screen and (max-width:320px) {
@@ -576,3 +647,50 @@
             }
         }
     
+        /* breakpoints for wallpaper card */
+        
+/* For small devices */
+@media screen and (min-width:320px) {
+    .destination__grid {
+  
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  
+    
+  }
+  
+  /* For medium devices */
+  @media screen and (min-width:576px) {
+    .destination__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+  }
+  
+  @media screen and (min-width:768px) {
+    .destination__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  
+  /* For large devices */
+  @media screen and (min-width:1150px) {
+    .destination__grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  
+  }
+  
+  @media screen and (min-width:1220px) {
+    .destination__grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media screen and (min-width: 1150px) {
+  
+    .destination__grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
